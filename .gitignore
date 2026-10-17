@@ -2,6 +2,7 @@
 node_modules/
 .next/
 out/
+tsconfig.tsbuildinfo
 
 # Local environment and credentials
 .env
