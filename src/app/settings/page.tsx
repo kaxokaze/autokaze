@@ -1,2 +1,5 @@
-import Dashboard from '../../components/dashboard'
-export default function SettingsPage() { return <Dashboard section="Settings & readiness" /> }
+import { AppShell } from "@/components/app-shell";
+
+export default function SettingsPage() {
+  return <AppShell page="settings" />;
+}

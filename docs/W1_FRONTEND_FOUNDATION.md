@@ -29,6 +29,20 @@ The navigation intentionally excludes the unavailable Drive connection route. So
 - The existing `/api/health` endpoint remains the sole application API route.
 - The app retains the W0 security headers and server-only environment-variable boundary.
 
+## W1 refinement: dashboard surface
+
+The initial broad demo dashboard was replaced with a smaller, Render-inspired operations surface. It retains the dark purple Autokaze visual identity while using fewer panels, larger hierarchy, more whitespace, boxed cards, and slower visual transitions.
+
+The user-facing application routes are now intentionally limited to:
+
+- `/login` — the first screen and safe workspace-preview entry point;
+- `/dashboard` — overview and readiness snapshot;
+- `/library` — source-library empty state and source readiness;
+- `/settings` — connection and release-gate readiness;
+- `/api/health` — operational health check.
+
+The root route redirects to `/login`. Legacy demo routes for queue, item detail, sources, and history were removed. All remaining actions either navigate within the application or present non-interactive status; there are no alerts, provider calls, OAuth flows, or publish actions.
+
 ## Verification evidence
 
 - `npm run typecheck` passed.
